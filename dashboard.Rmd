@@ -1,0 +1,97 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+library(flexdashboard)
+```
+
+```{r}
+data("ny_noaa")
+
+set.seed(5)
+
+ny_noaa_sample =
+  ny_noaa %>%
+  sample_n(4000) %>% # Taking sample of size 1000
+  separate(date, into = c("year", "month", "day"), sep = "-") %>% # Separating the date variable
+   mutate(
+     year = as.integer(year), # Correcting the variable classes
+     month = as.integer(month),
+     day = as.integer(day),
+     tmax = (as.numeric(tmax))/10, # Converting this into degrees C rather than tenths of degrees C
+     tmin = (as.numeric(tmin))/10, # Converting this into degrees C rather than tenths of degrees C
+     prcp = prcp/10, # Converting this into mm rather than tenths of mm
+     month = as.factor(month),
+     month = recode(month,
+                   "1" = "Jan",
+                   "2" = "Feb",
+                   "3" = "Mar",
+                   "4" = "Apr",
+                   "5" = "May",
+                   "6" = "Jun",
+                   "7" = "Jul",
+                   "8" = "Aug",
+                   "9" = "Sep",
+                   "10" = "Oct",
+                   "11" = "Nov",
+                   "12" = "Dec")
+     )
+```
+
+
+Column {data-width=550}
+-----------------------------------------------------------------------
+
+### Maximum Temperatures vs Minimum Temperatures
+
+```{r}
+ny_noaa_sample %>%
+  mutate(text_label = str_c("Day: ", day, "\nMonth: ", month, "\nYear: ", year)) %>% 
+  plot_ly(
+    x = ~tmin, y = ~tmax, type = "scatter", mode = "markers", color = ~month, text = ~text_label, alpha = 0.5, colors = "viridis") %>%
+  layout(
+    xaxis = list(title = "Minimum Temperature (C)"),
+    yaxis = list(title = "Maximum Temperature (C)")
+  )
+```
+
+Column {data-width=450}
+-----------------------------------------------------------------------
+
+### Distribution of Snowfall Values by Year
+
+```{r}
+ny_noaa_sample %>%
+  mutate(year = factor(year)) %>% 
+  filter(snow > 0, snow < 100) %>% 
+  plot_ly(y = ~snow, color = ~year, type = "box", colors = "viridis") %>%
+  layout(
+    xaxis = list(title = "Year"),
+    yaxis = list(title = "Snowfall (mm)")
+    )
+```
+
+### Mean Precipitation by Month
+
+```{r}
+ny_noaa_sample %>%
+  drop_na(prcp) %>% 
+  group_by(month) %>% 
+  summarize(mean_prcp = mean(prcp)) %>% 
+  mutate(month = fct_reorder(month, mean_prcp)) %>% 
+  plot_ly(x = ~month, y = ~mean_prcp, color = ~month, type = "bar", colors = "viridis") %>% 
+  layout(
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Mean Precipitation (mm)")
+    )
+```
+

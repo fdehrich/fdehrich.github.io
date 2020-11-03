@@ -10,4 +10,6 @@ Welcome to my personal website! I am a current master's student in biostatistics
 
 To learn more about me, feel free to take a look at my [resume](resume.html).
 
+This website also includes a [dashboard](dashboard.html) that presents plots generated using the P8105 NY NOAA dataset.
+
 *The above photo is from Naoshima, a small Japanese island filled with lots of cool art. One of my favorite trips!*
