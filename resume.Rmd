@@ -2,4 +2,73 @@
 title: "Resume"
 ---
 
-Template
+<p align="center">
+<img src="images/headshot.jpg" style="width:25%">
+</p>
+
+### Education
+
+**Columbia University Mailman School of Public Health**, New York, NY (Sep 2020 -- Present)
+
+* MS in Biostatistics (Theory and Methods Track)
+
+* Relevant coursework: Biostatistical Methods I, Probability, Data Science, Principles of Epidemiology
+
+**Harvard Extension School**, Cambridge, MA (Sep 2018 -- May 2020)
+
+* Non-degree student
+
+* Relevant coursework: Calculus 2 with Series and Differential Equations, Multivariable Calculus, Linear Algebra
+
+**Princeton University**, Princeton, NJ (Sep 2012 -- May 2016)
+
+* AB in Psychology
+
+* Relevant coursework: Quantitative Methods in Psychology, Research Methods in Psychology, Neuroscience, Cognitive Neuroscience, Neuroscience of Social Cognition and Emotion, Health Psychology, Theories of Psychotherapy
+
+### Work and Research Experience
+
+**Senior Regulatory Affairs Associate, Alkermes, Inc.**, Waltham, MA (Sep 2016 -- Jul 2020 )
+
+* Supported the clinical development and regulatory approval filings of therapeutics in schizophrenia, bipolar I disorder, major depressive disorder, and multiple sclerosis -- drafted and collaborated with subject matter experts on documents comprising new drug applications, managed responses to regulatory agency requests, served as a “behind-the-scenes” representative at an Advisory Committee Meeting at FDA, led development of a product package insert
+
+*	Initiated a workstream across Regulatory Affairs, Biostatistics, and Statistical Programming to ensure compliance with FDA requirements for clinical and nonclinical datasets
+
+*	Participated in initiative with members of Biostatistics and Statistical Programming teams to develop Shiny applications in R to facilitate medical review of the organization’s clinical trial safety and efficacy data
+
+**Senior Thesis**, Princeton University, Princeton, NJ
+
+*	Entitled: “Going Straight to the Source: Directly Measuring Ambivalent Sexism in Women’s Social Networks and Examining Its Health Implications”
+
+*	Drafted protocol and subject consent form; obtained IRB approval
+
+*	Collected data from 250 undergraduate students and performed statistical analyses
+
+*	Found significant correlations between students’ recent mental and physical health and psychosocial factors
+
+
+**Scientific Affairs Intern**, Association of American Medical Colleges, Washington, DC (Summer 2015)
+
+* Drafted a historical document for AAMC’s Forum on Conflict of Interest in Academe; coordinated and conducted 10 interviews with key members of the forum’s Steering Committee and compiled materials from AAMC’s archives
+
+* Created summary to prepare for revision of the Federal Policy for the Protection of Human Subjects 
+
+* Presented completed work at company-wide event
+
+**Research Intern**, Stem Cell and Regenerative Biology Department, Harvard University, Cambridge, MA	(Summer 2011)
+
+*	Independently synthesized six varieties of “stapled peptides” for use in novel diabetes studies
+
+*	Used mass spectrometry to assess purity of synthesized stapled peptides
+
+**Volunteer**, Children’s Hospital, Boston, MA (Oct 2010 -- Mar 2012)
+
+* Cared for infants and small children
+
+* Assisted in organizing activities for children
+
+### Skills
+
+* **Programming:** R (Tidyverse, R Markdown, Shiny) (basic proficiency); LaTeX (beginner)
+* **Data Standards:** Familiarity with CDISC standards (SDTM, ADaM, SEND)
+* **Language:** Spanish (limited working proficiency)
