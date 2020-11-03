@@ -1,0 +1,16 @@
+name: "Fiona Ehrich"
+output_dir: "."
+navbar:
+  title: "Home"
+  left:
+    - text: "Resume"
+      href: resume.html
+  right:
+    - icon: fa-envelope fa-lg
+      href: mailto:<fde2103@cumc.columbia.edu>
+    - icon: fa-github fa-lg
+      href: http://github.com/fdehrich/
+    - icon: fab fa-linkedin
+      href: https://www.linkedin.com/in/fiona-ehrich/
+output:
+  html_document
